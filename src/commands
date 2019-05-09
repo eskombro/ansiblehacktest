@@ -1,0 +1,2 @@
+ansible all -u lab -a 'osascript -e "set Volume 10"'
+ansible all -u lab -a 'afplay /Users/sjimenez/ansiblehacktest/src/laugh.wav'
