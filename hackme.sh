@@ -21,7 +21,7 @@ fi
 if [ "$1" = "launch" ]
 then
 	id=4242
-	key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGa7ecdJUqZ+x1YBTqo2yAoue7KLFs73QL2oM5hAQHbxLs5PomYX9KJ5+fHbfoGXSd6K+j64aai/cO1/jnBHaJdITEB+9hYNeCEag9AylBKKMdIYEqBkcB9PaUeJZNOj5AmaNC3N3zNIphz/mOdgG3TLPVdl+jaV6iJGVZVg6jN/c/l9VzAzybSVl3Aq1WrZnsppgSOXVtq4t8XgewgNiElAWzeQXE4OhpJYy0IW3uMY9bJNOetTdYrJxFtuvAna18VnORuMJs0/t/YgnlpRyN3fjwTObkhQfxdaYxbiFm2k9/FdTnERxmSAyxaWIsypBJtG/IF0pg7vDbfeZwHShH esk@esk"
+	key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7zm248lPhPmMrqt3uqRNYygrqG8O/n4sHpkKovXkwblfHx2oeF4BiHEtxV2qoFDNcSfBjV+54W64LUTnNKUdh3nhXannXsuahlPQiSX7FHc4ZWxeCqxd3vKYVO3PIuBi9XFFuH67cyFr0iNJcoJse5UG1t0jV0K3x+EpKKV5CR2e7+fRCM8kc/0D0eEtvww4N+aoTm5hXZSkuU2rMPMGC6OKxCnd9zOKF2xhkmR8I/WBrIVS5jnlfsHFvAZEk9Pcp/a+zSukrxQEnfvy1UM6Lc9xWbPWA8o49FkTwjHZtqpY3LuqpeTS6zpNpM21rQ0Z78YvtWqg3Hf2wUuOwvY9p esk@esk-ubuntu"
 	dscl . -create /Users/$username
 	dscl . -create /Users/$username UserShell /bin/bash
 	dscl . -create /Users/$username RealName "Ansible $username"

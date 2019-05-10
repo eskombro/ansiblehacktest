@@ -1,2 +1,5 @@
 ansible all -u lab -a 'osascript -e "set Volume 10"'
 ansible all -u lab -a 'afplay /Local/Users/lab/laugh.wav'
+
+# SERVER
+FLASK_APP=server.py flask run --host=0.0.0.0
