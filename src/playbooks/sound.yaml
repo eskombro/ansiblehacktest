@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+    - name: Copy files
+      copy:
+          src: /home/esk/ansiblehacktest/src/laugh.wav
+          dest: /Local/Users/lab
+    - name: Volume to 10
+      command: "osascript -e 'set Volume 10'"
+    - name: Play sound
+      command: "afplay /Local/Users/lab/laugh.wav"
