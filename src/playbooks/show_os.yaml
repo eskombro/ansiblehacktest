@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+    - name: copy files
+      copy:
+        src: /home/esk/ansiblehacktest/src/test.py
+        dest: /Local/Users/lab
+    - name: run program
+      command: python /Local/Users/lab/test.py
+      register: ans
+    - debug: var=ans
