@@ -1,0 +1,6 @@
+1. Update ip in hackme.sh
+2. Run the server
+3. Delete known_hosts?
+4. Uninstall ansible
+5. Make Git Repository public
+6. Push Docker image to DockerHub
