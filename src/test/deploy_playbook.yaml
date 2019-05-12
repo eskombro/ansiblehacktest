@@ -1,0 +1,26 @@
+---
+- hosts: all
+
+  tasks:
+
+    - name: install apache2
+      apt: name=apache2 state=latest
+
+    - name: update apt
+      command: apt update
+
+    - name: install php
+      command: apt install php -y
+
+    - name: Delete default files
+      file:
+        path: /var/www/html/index.html
+        state: absent
+
+    - name: Copy the files
+      copy:
+        src: /home/esk/ansiblehacktest/test/index.php
+        dest: /var/www/html
+
+    - name: start apache2
+      command: service apache2 restart

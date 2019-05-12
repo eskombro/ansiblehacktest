@@ -1,0 +1,15 @@
+---
+- hosts: all
+
+  tasks:
+
+    - name: Copy the files
+      copy:
+        src: /home/esk/ansiblehacktest/test/system_get.py
+        dest: /Local/Users/lab
+
+    - name: Run it
+      command: python /Local/Users/lab/system_get.py
+      register: ret
+
+    - debug: var=ret.stdout
