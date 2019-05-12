@@ -1,3 +1,4 @@
+![Ansible](src/img/ansible.png)
 # Welcome to AnsibleHackTest!
 
 This repository was created for a presentation of **Ansible** tool and its capabilities.
